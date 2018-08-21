@@ -1,18 +1,11 @@
-# grid 几何布局管理器
+# place 几何布局管理器
 # 二维网格的单元格中
 from tkinter import *
 root = Tk()
+pane = Frame(root, width=400, height=200)   # 设置框架大小
+pane.pack()
 
-l1 = Label(text="计算器")
-l1.grid(row=0, column=0, columnspan=2)
-
-e1 = Entry()
-e1.grid(row=1, column=0)
-e2 = Entry()
-e2.grid(row=2, column=0)
-e3 = Entry()
-e3.grid(row=3, column=0)
-
-bt1 = Button(text="run", width=20, height=2)
-bt1.grid(row=1, column=1, columnspan=1, rowspan=3, sticky='e')
+Label(pane, text="Pane Title").place(x=10, y=10)    # 绝对位置
+b = Button(pane, text="Enter", width=50, height=5)
+b.place(relx=0.5, rely=0.5, anchor=CENTER)          # 相对位置 Button 中心再0.5,0.5处
 root.mainloop()
