@@ -30,10 +30,6 @@ def get_stock_list(lst, stockURL):
         except:
             continue
 
-
-    return ""
-
-
 def get_stock_info(lst, stockURL, fpath):
     for stock in lst:
         url = stockURL + stock + ".html"
