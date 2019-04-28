@@ -4,4 +4,4 @@ build
 .idea
 *.spec
 *.html
-
+py2exe
